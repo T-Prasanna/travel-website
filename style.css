@@ -464,3 +464,8 @@ form button:hover {
     flex-direction: column;
     gap: 20px;
 }
+.plane {
+    font-size: 30px;
+    color:  #ffa500;
+  }
+  

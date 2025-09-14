@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TravelBloom - Explore Destinations</title>
-
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-
 <body>
 
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo">✈️ TravelBloom</div>
+    <div class="logo"><span class="plane">✈</span> TravelBloom</div>
+
     <div class="nav-links">
       <a href="#" onclick="showSection('home')">Home</a>
       <a href="#" onclick="showSection('about')">About Us</a>
@@ -42,7 +40,7 @@
 
     <!-- Home Section -->
     <div id="home" class="section active">
-        <!-- Left side (text content) -->
+      <div class="home-container">
         <div class="hero-content">
           <h1>EXPLORE<br>DREAM<br>DESTINATION</h1>
           <p>
@@ -51,12 +49,11 @@
           </p>
           <button id="bookNowBtn">BOOK NOW</button>
         </div>
-      
-        <!-- Right side (recommendations / search results) -->
         <div id="resultsSection"></div>
       </div>
-      
-    <!-- About Us Section -->
+    </div>
+
+    <!-- About Section -->
     <div id="about" class="section hidden">
       <h2>About TravelBloom</h2>
       <p>
@@ -69,18 +66,12 @@
         and breathtaking experiences</em> across the globe. From bustling city escapes to peaceful 
         getaways in nature, we provide trusted recommendations that bring your journeys to life.  
       </p>
-      <p>At TravelBloom, our values are rooted in:</p>
       <ul>
         <li><strong>Integrity</strong> – Honest and authentic recommendations.</li>
         <li><strong>Innovation</strong> – Using technology to personalize your travel experience.</li>
         <li><strong>Customer Focus</strong> – Putting travelers first in everything we do.</li>
         <li><strong>Sustainability</strong> – Promoting eco-friendly and responsible travel.</li>
       </ul>
-      <p>
-        Whether you are a solo traveler, a family on vacation, or an adventure seeker, 
-        TravelBloom is here to make your travel planning easy, exciting, and stress-free.
-      </p>
-
       <h2>Our Team</h2>
       <div class="about-container">
         <div class="team-card">
@@ -89,14 +80,12 @@
           <div class="role">Chief Executive Officer</div>
           <button class="role-btn">CEO</button>
         </div>
-
         <div class="team-card">
           <i class="fas fa-user-pen"></i>
           <h3>Teja</h3>
           <div class="role">Content & Travel Experience Lead</div>
           <button class="role-btn">Team Lead</button>
         </div>
-
         <div class="team-card">
           <i class="fas fa-user-cog"></i>
           <h3>Chinna</h3>
@@ -106,7 +95,7 @@
       </div>
     </div>
 
-    <!-- Contact Us Section -->
+    <!-- Contact Section -->
     <div id="contact" class="section hidden">
       <h2>Contact Us</h2>
       <form id="contactForm">
@@ -116,12 +105,11 @@
         <button type="submit">Submit</button>
       </form>
     </div>
+
   </div>
 
   <!-- Scripts -->
-  <script src="travel_recommendation.js"></script>
   <script>
-    // Section switcher
     function showSection(sectionId) {
       document.querySelectorAll('.section').forEach(sec => {
         sec.classList.add('hidden');
@@ -131,5 +119,6 @@
       document.getElementById(sectionId).classList.add('active');
     }
   </script>
+  <script src="travel_recommendation.js"></script>
 </body>
 </html>
